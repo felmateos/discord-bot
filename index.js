@@ -21,7 +21,7 @@ for (const file of commandsFiles) {
     if ("data" in command   && "execute" in command) {
         client.commands.set(command.data.name, command);
     } else {
-        console.log(`O comando em "${filePath}" eh invalido.`)
+        console.log(`The command in "${filePath}" isnt valid.`)
     }
 }
 
@@ -38,7 +38,7 @@ client.on(Events.InteractionCreate, async interaction => {
     if (!interaction.isChatInputCommand()) return
     const command = interaction.client.commands.get(interaction.commandName)
     if (!command) {
-        console.error("Comando não encontrado")
+        console.error("Command not found.")
         return
     }
     try {
@@ -46,6 +46,6 @@ client.on(Events.InteractionCreate, async interaction => {
     } 
     catch (error) {
         console.error(error)
-        await interaction.reply("Houve um erro ao executar esse comando!")
+        await interaction.reply("Wasnt able to execute this command.")
     }
 })
