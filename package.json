@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "discord.js": "^14.9.0",
+    "dotenv": "^16.0.3"
+  },
+  "name": "discord-bot",
+  "description": "Um bot de Discord com funcoes variadas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "dc": "node deploy-commands.js",
+    "debug": "node --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felmateos/discord-bot.git"
+  },
+  "keywords": [
+    "bot",
+    "discord"
+  ],
+  "author": "felmateos",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/felmateos/discord-bot/issues"
+  },
+  "homepage": "https://github.com/felmateos/discord-bot#readme"
+}
