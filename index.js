@@ -35,6 +35,12 @@ client.once(Events.ClientReady, c => {
 client.login(TOKEN);
 
 client.on(Events.InteractionCreate, async interaction => {
+    if (interaction.isStringSelectMenu()) {
+        const selected = interaction.values[0];
+        if (interaction.customId === 'select') {
+            await interaction.update({ content: 'documentation: ' + selected, components: []});
+        }
+    }
     if (!interaction.isChatInputCommand()) return
     const command = interaction.client.commands.get(interaction.commandName)
     if (!command) {
